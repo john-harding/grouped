@@ -3,7 +3,7 @@ import Link from './Link';
 
 const LoggedIn = (props) => {
 	return (
-		<li><Link href={props.user.url} text={props.user.username} /></li>
+		<li><Link href="/home" text={props.user.username} /></li>
 	);
 }
 

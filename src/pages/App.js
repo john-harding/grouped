@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
-import Header from './components/Header';
+import Header from '../components/Header';
+import {connect} from 'react-redux';
 
+// const user = {
+//     user: {
+//       loggedIn: true,
+//       username:"john",
+//       url:"/john"
+//     },
+//     content: {
+//       editing: false
+//     }
+// };
+
+const mapStateToProps = (state) => {
+  return {
+    data: state
+  }
+}
 class App extends Component {
   render() {
     return (
@@ -20,4 +37,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
+// export default App;
